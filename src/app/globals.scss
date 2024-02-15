@@ -45,10 +45,12 @@ body {
     justify-content: center;
     padding: 10px;
     margin: 0px 5px;
+    font-size: calc(12px + 0.5vw);
     font-weight: bold;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .navbar p:hover {
@@ -74,16 +76,15 @@ body {
 
 .hello-world .hello {
     color: rgb(230, 207, 255);
-    font-size: 25px;
+    font-size: calc(2vw + 8px);
     font-weight: 800;
     letter-spacing: 1px;
-    margin-left: 50px;
-    white-space: nowrap;
+    margin-left: calc(5vw + 30px);
 }
 
 .hello-world .my-name {
     color: white;
-    font-size: 150px;
+    font-size: calc(5vw + 30px);
     font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
@@ -93,7 +94,7 @@ body {
 
 .hello-world .profession {
     color: rgb(230, 207, 255);
-    font-size: 30px;
+    font-size: calc(2vw + 10px);
     font-weight: 600;
     letter-spacing: 1px;
     white-space: nowrap;
@@ -124,8 +125,7 @@ body {
     margin-bottom: 50px;
 }
 
-.about-me .section-content
-{
+.about-me .section-content {
     margin-top: 20px;
     padding: 0 40px;
     line-height: 1.2;
@@ -143,8 +143,8 @@ body {
 .about-me img {
     margin-right: 30px;
     border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    height: calc(10vw + 100px);
+    width: auto;
 }
 
 .skills {
@@ -160,14 +160,16 @@ body {
 }
 
 .skills .section-content {
-    overflow-x: auto;
-    white-space: nowrap;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0;
 }
 
-.skills img {
+.skills .section-content img {
     height: 150px;
-    width: 150px;
+    width: auto;
     margin-bottom: 20px;
 }
 
@@ -212,3 +214,108 @@ body {
 .contact-me img:hover {
     cursor: pointer;
 }
+
+@media (max-width: 769px) {
+    .hello-world,
+    .about-me .section-content,
+    .skills,
+    .projects .project,
+    .contact-me {
+        width: 100vw;
+    }
+
+    .navbar .container p {
+        padding: 5px;
+    }
+
+    .about-me .section-content {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .about-me img {
+        margin: 0 0 20px 0;
+        height: 250px;
+        width: 250px;
+    }
+
+    .skills .section-content {
+        display: flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .skills img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .projects .section-content {
+        display: flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projects .project {
+        width: calc(30vw + 20px);
+    }
+
+    .contact-me img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 481px) {
+    .hello-world,
+    .about-me .section-content,
+    .skills,
+    .projects .project,
+    .contact-me {
+        width: 100vw;
+    }
+
+    .navbar .container {
+        padding: 10px;
+    }
+
+    .navbar .container p {
+        padding: 2px;
+    }
+
+    .about-me .section-content {
+        flex-direction: column;
+    }
+
+    .about-me img {
+        margin: 0 0 20px 0;
+    }
+
+    .skills .section-content img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .projects .section-content {
+        display: flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projects .project {
+        width: 90vw;
+    }
+
+    .contact-me .section-content {
+        flex-wrap: wrap;
+    }
+
+    .skills img,
+    .contact-me img {
+        height: 120px;
+        width: 120px;
+        margin: 10px;
+    }
+}
+

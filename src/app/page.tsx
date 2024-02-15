@@ -3,9 +3,7 @@ import Image from "next/image";
 export default function Home() {
     return (
         <main>
-            <div className="to-top">
-
-            </div>
+            <div className="to-top"></div>
             <div className="navbar">
                 <div className="container">
                     <a href="/">
@@ -13,10 +11,10 @@ export default function Home() {
                     </a>
                     <div className="nav-options">
                         <p>Home</p>
-                        <p>About Me</p>
+                        <p>About</p>
                         <p>Skills</p>
                         <p>Projects</p>
-                        <p>Contact</p>
+                        <p>Contact Me</p>
                     </div>
                 </div>
             </div>
@@ -29,7 +27,7 @@ export default function Home() {
             </div>
             <div className="sections">
                 <div className="about-me">
-                    <h1 class="section-header">About Me</h1>
+                    <h1 class="section-header">About</h1>
                     <div className="section-content">
                         <img src="./photo.jpg" alt="My Photo" />
                         <p>

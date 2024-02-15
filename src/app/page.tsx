@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <main>
             <div className="to-top">
-                
+
             </div>
             <div className="navbar">
                 <div className="container">
@@ -109,7 +109,9 @@ export default function Home() {
                         <a href="https://www.linkedin.com/in/ian-lohan-9140ab24b/">
                             <img src="./linkedin.png" alt="linkedin" />
                         </a>
-                        <img src="" alt="email" />
+                        <a href="https://www.instagram.com/ianlohan.acc/">
+                            <img src="./instagram.png" alt="instagram" />
+                        </a>
                     </div>
                 </div>
             </div>
